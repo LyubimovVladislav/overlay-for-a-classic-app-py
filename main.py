@@ -20,7 +20,7 @@ if __name__ == "__main__":
     async def redraw_window(hwnd):
         global overlay
         while True:
-            if not win32gui.IsWindow(game_hwnd):
+            if not win32gui.IsWindow(hwnd):
                 print('no game hwnd, exiting')
                 break
             message = win32gui.GetMessage(None, 0, 0)
