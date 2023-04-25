@@ -38,6 +38,6 @@ if __name__ == "__main__":
         print('no game hwnd, exiting')
         exit()
 
-    x, y, w, h = 0, 0, 1920, 1080
+    x, y, w, h = 0, 0, 0, 0
     win32gui.SetWindowPos(overlay.hWnd, win32con.HWND_TOPMOST, x, y, w, h, win32con.SWP_SHOWWINDOW)
     asyncio.run(redraw_window(game_hwnd))
